@@ -1,33 +1,66 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>BUENA IDEA IMPACTO</title>
-  <style>
-    body {
-      background: black;
-      color: white;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 50px;
-    }
-    h1 {
-      font-size: 3em;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUENA IDEA - Meta Marketing de Alto Impacto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #000; color: #fff; overflow-x: hidden; line-height: 1.6; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
+        .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; background: linear-gradient(135deg, #000 0%, #111 100%); }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" patternUnits="userSpaceOnUse" width="100" height="100"><circle cx="25" cy="25" r="0.5" fill="%23333" opacity="0.1"/><circle cx="75" cy="75" r="0.3" fill="%23666" opacity="0.1"/><circle cx="50" cy="10" r="0.2" fill="%23444" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>'); opacity: 0.3; }
+        .logo { text-align: center; z-index: 2; margin-bottom: 60px; }
+        .logo-container { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+        .logo-image { display: flex; align-items: center; justify-content: center; }
+        .brand-logo { width: 180px; height: auto; display: block; }
+        .subtitle { font-size: clamp(0.8rem, 2vw, 1.2rem); font-weight: 300; letter-spacing: 0.3em; text-transform: uppercase; color: #888; margin-top: 20px; }
+        .philosophy { max-width: 600px; text-align: center; z-index: 2; margin-bottom: 40px; opacity: 0.6; }
+        .philosophy p { font-size: clamp(0.8rem, 1.5vw, 1rem); font-weight: 300; line-height: 1.6; color: #999; margin-bottom: 0; }
+        .social-container { display: flex; gap: 50px; z-index: 2; margin-top: 80px; }
+        .social-item { position: relative; transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+        .social-item:hover { transform: translateY(-12px) scale(1.05); }
+        .social-link { display: flex; flex-direction: column; align-items: center; text-decoration: none; color: #888; transition: all 0.3s ease; }
+        .social-link:hover { color: #fff; }
+        .social-icon { width: 80px; height: 80px; border: 2px solid #333; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; transition: all 0.3s ease; background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); }
+        .social-item:hover .social-icon { border-color: #fff; background: rgba(255, 255, 255, 0.15); box-shadow: 0 30px 60px rgba(255, 255, 255, 0.15); }
+        .social-icon svg { width: 32px; height: 32px; fill: currentColor; }
+        .social-name { font-size: 1.1rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(60px); } to { opacity: 1; transform: translateY(0); } }
+        .hero > * { animation: fadeInUp 1s ease-out forwards; }
+        .logo { animation-delay: 0.2s; }
+        .philosophy { animation-delay: 0.4s; }
+        .social-container { animation-delay: 0.6s; }
+        @media (max-width: 768px) { .container { padding: 0 20px; } .social-container { gap: 30px; flex-wrap: wrap; justify-content: center; } .philosophy p { font-size: 1.1rem; } }
+        @media (max-width: 480px) { .social-container { gap: 20px; } .social-icon { width: 50px; height: 50px; } .social-icon svg { width: 20px; height: 20px; } }
+    </style>
 </head>
 <body>
-  <h1>🔥 IMPACTO DESBLOQUEADO 🔥</h1>
-  <p>Bienvenido al mundo BUENA IDEA.</p>
-
-  <script>
-    // Verifica que el dispositivo soporte vibración
-    if ("vibrate" in navigator) {
-      // Patrón loco: vibra - pausa - vibra largo - pausa - vibra corto
-      navigator.vibrate([200, 100, 500, 200, 300, 100, 700]);
-    }
-  </script>
+    <section class="hero">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-container">
+                    <div class="logo-image">
+                        <img src="buenaidea.png" alt="Buena Idea Logo" class="brand-logo">
+                    </div>
+                    <div class="subtitle">Meta Marketing de Alto Impacto</div>
+                </div>
+            </div>
+            <div class="philosophy">
+                <p>Desde el principio de la historia, el hombre busca la inmortalidad, un legado. La publicidad es también arte, porque convierte ideas en símbolos y emociones compartidas. Mi trabajo habita en ese espacio: donde las disciplinas se cruzan, donde la belleza dialoga con la obscenidad, donde la creación se vuelve eterna.</p>
+            </div>
+            <div class="social-container">
+                <div class="social-item">
+                    <a href="#" class="social-link" data-platform="instagram">
+                        <div class="social-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </div>
+                        <span class="social-name">Instagram</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
